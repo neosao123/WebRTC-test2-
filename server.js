@@ -14,10 +14,10 @@ app.use(cors());
 
 let connectedUsers = [];
 let rooms = [];
-
 app.get('/', (req, res) => {
 	res.send('Running');
 });
+
 //create route to check room exist
 app.get("/api/room-exists/:roomId", (req, res) => {
     const { roomId } = req.params;
@@ -181,13 +181,3 @@ const initializeConnectionHandler = (data, socket) => {
 server.listen(PORT, () => {
     console.log(`server is listning on ${PORT}`);
 })
-
-
-
-
-
-
-
-
-
-
